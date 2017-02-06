@@ -8,12 +8,13 @@ function addHref(text,regexStr,keys,values) {
     return replaceProcessor("tag",regex,text);
 
     function getHrefPrefix(match) {
-        var key = match.substring(0,match.indexOf("-"));
-        for ( var i = 0; i < keys.length; i++){
+/*        var key = match.substring(0,match.indexOf("-"));
+         for ( var i = 0; i < keys.length; i++){
             if ( keys[i] == key){
                 return values[i];
             }
-        }
+        } */
+        return "http://support.grantstreet.com/browse/";
     }
     function replaceProcessor(seperatorType,targetRegex,text) {
         var urlPatten = /https?:\/\/[^<> ()]+|www.[^<> ()]*/gm;
